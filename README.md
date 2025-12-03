@@ -36,7 +36,7 @@ WebContainer IDE is a production-ready, browser-based development environment th
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/webcontainer-ide.git
+git clone https://github.com/Sunny-117/webcontainer-ide.git
 cd webcontainer-ide
 
 # Install dependencies
@@ -409,7 +409,7 @@ We welcome contributions! Here's how to get started:
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/yourusername/webcontainer-ide.git
+git clone https://github.com/Sunny-117/webcontainer-ide.git
 cd webcontainer-ide
 
 # Install dependencies
@@ -454,17 +454,17 @@ This project is built on the shoulders of giants:
 
 ## 📞 Support & Community
 
-- 📖 **Documentation** - [GitHub Wiki](https://github.com/yourusername/webcontainer-ide/wiki)
-- 🐛 **Bug Reports** - [Issue Tracker](https://github.com/yourusername/webcontainer-ide/issues)
-- 💬 **Discussions** - [GitHub Discussions](https://github.com/yourusername/webcontainer-ide/discussions)
+- 📖 **Documentation** - [GitHub Wiki](https://github.com/Sunny-117/webcontainer-ide/wiki)
+- 🐛 **Bug Reports** - [Issue Tracker](https://github.com/Sunny-117/webcontainer-ide/issues)
+- 💬 **Discussions** - [GitHub Discussions](https://github.com/Sunny-117/webcontainer-ide/discussions)
 - 🌟 **Star** the project if you find it useful!
 
 ## 📊 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/webcontainer-ide?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/webcontainer-ide?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/webcontainer-ide)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/webcontainer-ide)
+![GitHub stars](https://img.shields.io/github/stars/Sunny-117/webcontainer-ide?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Sunny-117/webcontainer-ide?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Sunny-117/webcontainer-ide)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Sunny-117/webcontainer-ide)
 
 ---
 
