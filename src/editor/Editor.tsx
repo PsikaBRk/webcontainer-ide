@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import MonacoEditor from '@monaco-editor/react';
 import { X } from 'lucide-react';
 import { useStore } from '../store/useStore';

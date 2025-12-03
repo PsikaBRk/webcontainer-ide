@@ -20,6 +20,7 @@ export const Terminal: React.FC = () => {
 
     const xterm = new XTerm({
       cursorBlink: true,
+      cursorStyle: 'block',
       fontSize: 14,
       fontFamily: '"Cascadia Code", Menlo, Monaco, "Courier New", monospace',
       theme: {
@@ -47,8 +48,6 @@ export const Terminal: React.FC = () => {
       },
       scrollback: 10000,
       convertEol: true,
-      cursorStyle: 'block',
-      cursorBlink: true,
       allowProposedApi: true,
     });
 
@@ -77,7 +76,7 @@ export const Terminal: React.FC = () => {
     });
 
     // 监听滚动
-    let scrollTimeout: NodeJS.Timeout;
+    let scrollTimeout: ReturnType<typeof setTimeout>;
     xterm.onScroll(() => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
