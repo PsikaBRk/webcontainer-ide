@@ -88,55 +88,6 @@ pnpm preview
                 └──────────────────────────┘
 ```
 
-### Component Architecture
-
-```
-src/
-├── editor/
-│   └── Editor.tsx              # Monaco editor integration
-│       - Multi-tab support
-│       - Auto-save to WebContainer
-│       - Language detection
-│       - Syntax highlighting
-│
-├── preview/
-│   └── Preview.tsx             # Live preview iframe
-│       - Dev server connection
-│       - Auto-refresh on changes
-│       - Port forwarding
-│
-├── ui/
-│   ├── FileTree.tsx            # File system tree view
-│   │   - Context menu (create/delete)
-│   │   - Real-time sync (2s polling)
-│   │   - Drag-to-expand folders
-│   │
-│   └── Terminal.tsx            # Interactive terminal
-│       - xterm.js integration
-│       - Command execution
-│       - 10k line scrollback
-│       - Auto-scroll to command
-│
-├── webcontainer/
-│   ├── webcontainer.ts         # WebContainer API wrapper
-│   ├── init.ts                 # Initialization & boot logic
-│   ├── template.ts             # Default Vite+React template
-│   ├── fileWatcher.ts          # File system monitoring
-│   ├── fileOperations.ts       # CRUD operations
-│   └── terminalManager.ts      # Terminal instance manager
-│
-├── store/
-│   └── useStore.ts             # Zustand global state
-│       - File tree state
-│       - Open files tracking
-│       - Terminal output
-│       - Preview URL
-│
-└── App.tsx                     # Main application layout
-    - Panel management (react-resizable-panels)
-    - Component orchestration
-```
-
 ## 🛠️ Technology Stack
 
 ### Core Technologies
